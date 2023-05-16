@@ -23,6 +23,7 @@ function App() {
         const inputLocation = formData.get('location');
 
         const res = await fetch(
+            process.env.API_URL +
             '/api/geocode?' +
             new URLSearchParams({ location: inputLocation }).toString()
         );
@@ -53,7 +54,7 @@ function App() {
 
         const formData = new FormData(event.target);
         const locations = formData.getAll('location');
-        const res = await fetch('/api/route', {
+        const res = await fetch(process.env.API_URL + '/api/route', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
