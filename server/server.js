@@ -52,6 +52,6 @@ app.post('/api/route', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server listening on ${PORT}`);
 });
