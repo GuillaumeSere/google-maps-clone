@@ -26,7 +26,7 @@ async function geocodeLocation(loc) {
   return data;
 }
 
-app.get('/api/geocode', async (req, res) => {
+app.get('https://google-maps-clone-i01jka0zv-guillaumesere.vercel.app/api/geocode', async (req, res) => {
   try {
     const location = req.query.location;
     const coordinates = await geocodeLocation(location);
@@ -36,7 +36,7 @@ app.get('/api/geocode', async (req, res) => {
   }
 });
 
-app.post('/api/route', async (req, res) => {
+app.post('https://google-maps-clone-i01jka0zv-guillaumesere.vercel.app/api/route', async (req, res) => {
   try {
     const locations = req.body.locations;
     if (locations.length !== 2) {
