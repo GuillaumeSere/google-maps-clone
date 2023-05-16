@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.leaflet-container {
+    width: 100vw;
+    height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* Location form */
+.inputBlock {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 2vw;
+    bottom: 2vh;
+    padding: 10px;
+    z-index: 500;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .addloc {
+    padding: 5px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    border: none;
   }
-}
+  .calcul:hover{
+    background: rgb(24, 213, 207) !important;
+  }
+  .addloc:hover{
+    background: #424751;
+  }
+  
+  .inputBlock input {
+    border: none;
+    background: #282c34;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 10px 0 0 10px;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .inputBlock button {
+    background-color: #282c34;
+    font-size: 1.5rem;
+    border: 2px black solid;
+  }
+  .routeBlock {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 3rem;
+    width: 310px;
+    bottom: 6rem;
+    z-index: 500;
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgb(41, 38, 38);
+    background-color: #282c34;
+  }
+  .delete{
+    margin-top: .5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(24, 213, 207);
+  }
+  .delete:hover{
+    background: rgb(5, 250, 242);
+  }
+
+  .search{
+    cursor: pointer;
+  }
+
+  input{
+    outline: none;
+  }
+  
+  .routeBlock input {
+    font-size: 1rem;
+  }
+
+  .leaflet-routing-alternatives-container{
+    background: #282c34;
+    color: white;
+  }
+
+  .leaflet-routing-instruction-icon{
+    background: rgb(0, 255, 247);
+    margin: 1rem;
+  }
+
+  tr:hover td:nth-child(2){
+    background: black;
+  }
+
+  tr:hover td:nth-child(3){
+    background: black;
+    color: white;
+  }
+
+  tr td:nth-child(3){
+    color: rgb(0, 255, 247);
+  }
+
+  .leaflet-routing-alt table{
+    border-collapse: revert !important;
+    padding: .5rem;
+  }
+  h2, h3{
+    color: rgb(0, 255, 0);
+  }
+  
